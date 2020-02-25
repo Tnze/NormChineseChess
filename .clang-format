@@ -1,0 +1,11 @@
+BasedOnStyle: WebKit
+AlignTrailingComments: true
+AlignOperands: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+BreakBeforeBraces: Linux
+NamespaceIndentation: All
+UseTab: Always
+TabWidth: 4

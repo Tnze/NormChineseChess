@@ -5,37 +5,45 @@
 
 #include <iostream>
 
-namespace NormChineseChess {
+namespace NormChineseChess
+{
 
 	enum class Piece {
-		Sentry,		//出界
-		Empty,		//空位
+		Sentry, //出界
+		Empty,	//空位
 
 		// 红方棋子
-		R_Rooks,	//车
-		R_Knights,	//马
-		R_Elephants,//相 
-		R_Mandarins,//仕
-		R_General,	//帅
-		R_Cannons,	//炮
-		R_Pawns,	//兵
+		R_Rooks,	 //车
+		R_Knights,	 //马
+		R_Elephants, //相
+		R_Mandarins, //仕
+		R_General,	 //帅
+		R_Cannons,	 //炮
+		R_Pawns,	 //兵
 
 		// 黑方棋子
-		B_Rooks,	//车
-		B_Knights,	//马
-		B_Elephants,//象
-		B_Mandarins,//士
-		B_General,	//将
-		B_Cannons,	//炮
-		B_Pawns		//卒
+		B_Rooks,	 //车
+		B_Knights,	 //马
+		B_Elephants, //象
+		B_Mandarins, //士
+		B_General,	 //将
+		B_Cannons,	 //炮
+		B_Pawns		 //卒
 	};
 
-	class Vec2 { int x, y; };
+	class Vec2
+	{
+		int x, y;
+	};
 	// 一着棋
-	class Move { Vec2 from, to; };
+	class Move
+	{
+		Vec2 from, to;
+	};
 
 	// 象棋棋盘
-	class Board {
+	class Board
+	{
 		// TODO: 棋盘的计算机表示
 	public:
 		// 在棋盘上应用一着棋，并返回被吃掉的棋子
@@ -44,10 +52,13 @@ namespace NormChineseChess {
 		void Rollback(Move, Piece);
 	};
 
-	enum class Status { Gaming, RedWin, BlackWin };
+	enum class Status { Gaming,
+		RedWin,
+		BlackWin };
 
 	// 象棋游戏
-	class Game {
+	class Game
+	{
 		Board board;
 
 	public:
