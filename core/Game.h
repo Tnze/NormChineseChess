@@ -2,6 +2,7 @@
 // 或项目特定的包含文件。
 
 #pragma once
+#pragma execution_character_set("utf-8")
 
 #include <iostream>
 

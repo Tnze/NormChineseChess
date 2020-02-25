@@ -4,7 +4,7 @@ namespace NormChineseChess
 {
 	Move Game::ParseMove(std::string s)
 	{
-		// TODO: 将类似“炮二平五”的棋语解析为Move对象
+		// TODO: 灏嗙被浼尖�滅偖浜屽钩浜斺�濈殑妫嬭瑙ｆ瀽涓篗ove瀵硅薄
 		return Move();
 	}
 
