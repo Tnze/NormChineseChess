@@ -4,6 +4,8 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
+#include <stack>
 
 namespace NormChineseChess {
 
@@ -67,4 +69,51 @@ namespace NormChineseChess {
 		// 将动作用棋语表示
 		std::string SpeekMove(Move);
 	};
-}
+}class CantMoveException : public std::exception
+{
+	const char *reason = "Cannot move like this";
+
+public:
+	const char *what() const throw()
+	{
+		return this->reason;
+	}
+};
+enum class Direction
+{
+	FORWARD,	//前进趋势
+	BACKWARD,   //后退趋势
+	TRANSLATION //平移
+};
+enum class Rela_Pos
+{
+	NONE,
+	FRONT,  //前面的
+	CENTER, //中间的
+	BACK	//后面的
+};
+struct Move
+{
+	Piece piece;
+	Direction direction; //进退
+	int length;
+	//以下标识用于消歧义
+	Rela_Pos relative_position; //前后
+};
+class MoveGenerate
+{
+	//根据棋子及指令，特化它的生成移动
+public:
+	void operator()(Move instruction, Piece type) throw()
+	{
+		switch (type)
+		{
+		case Piece::Sentry:
+			/* code */
+			break;
+
+		default:
+			break;
+		}
+	}
+};
